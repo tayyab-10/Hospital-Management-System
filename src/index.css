@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@100;200;400;700&family=Roboto:wght@100;400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  height: 100vh;
+  max-height: -webkit-fill-available;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.bgSubMain {
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 181 163 / var(--tw-bg-opacity));
+}
+.bg-dry {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 249 250 / var(--tw-bg-opacity));
+}
+.border-border {
+  --tw-border-opacity: 1;
+  border-color: rgb(232 235 238 / var(--tw-border-opacity));
+}
+.border {
+  border-width: 1px;
+}
+.text-main {
+  --tw-text-opacity: 1;
+  color: rgb(24 50 83 / var(--tw-text-opacity));
+}
+.toggle {
+  @apply bg-primary py-2 px-8 text-base font-semibold cursor-pointer rounded font-poppins;
+}
+
+.notToggle {
+  @apply py-2 px-8 text-base font-poppins font-medium text-primary cursor-pointer rounded;
+}
+
+.input {
+  @apply font-poppins px-3 py-2 bg-bgsecondary rounded outline-none;
+}
+/* .input {
+  @apply font-poppins px-3 py-2 bg-bgsecondary rounded outline-none;
+} */
+
+.step-item {
+  @apply relative flex flex-col justify-center items-center w-36;
+}
+
+.step-item {
+  @apply relative flex flex-col justify-center items-center w-36;
+}
+.step-item:not(:first-child):before {
+  @apply content-[''] bg-slate-200 absolute w-full h-[3px] right-2/4 top-1/3 -translate-y-2/4;
+}
+.step {
+  @apply w-10 h-10 flex items-center justify-center z-10 relative bg-slate-700 rounded-full font-semibold text-white;
+}
+.active .step {
+  @apply bg-sky-600;
+}
+.complete .step {
+  @apply bg-green-600;
+}
+.complete p {
+  @apply text-white;
+}
+.complete:not(:first-child):before,
+.active:not(:first-child):before {
+  @apply bg-green-600;
+}
